@@ -1,0 +1,14 @@
+inherit cmake
+
+NAME="birdie"
+VERSION=1.1
+RELEASE=1
+CATEGORY="Net"
+SUMMARY="GTK+ Twitter client"
+DESCRIPTION="Birdie is a Twitter client written with GNU/Linux in mind."
+HOMEPAGE="http://birdieapp.github.io/"
+SRC_URI="https://github.com/birdieapp/birdie/archive/${VERSION}/birdie-${VERSION}.tar.gz"
+
+DIFF_EXCLUDES="config.vala"
+
+CYGCMAKE_ARGS="-DGSETTINGS_COMPILE=OFF"
